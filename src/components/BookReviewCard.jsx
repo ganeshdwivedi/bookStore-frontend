@@ -55,19 +55,13 @@ const BookReviewCard = () => {
                     </div>
 
                     <div className="flex flex-col">
-                        <Link className={token ? "block" : "hidden"} to={`/books/update/${book._id}`}>
-                            <button
-                                className="bg-black my-2 md:w-[25vw] rounded-[25px] py-2 text-white"
-                            >
-                                Update This Book
-                            </button>
+                        <Link className={token ? "text-center bg-black my-2 md:w-[25vw] rounded-[25px] py-2 text-white" : "hidden"} to={`/books/update/${book._id}`}>
+                            Update This Book
                         </Link>
-                        <Link className={token ? "block" : "hidden"} to={`/books/delete/${book._id}`}>
-                            <button
-                                className="bg-black my-2 md:w-[25vw] rounded-[25px] py-2 text-white"
-                            >
-                                Delete This Book
-                            </button>
+                        <Link className={token ? "text-center bg-black my-2 md:w-[25vw] rounded-[25px] py-2 text-white" : "hidden"} to={`/books/delete/${book._id}`}>
+
+                            Delete This Book
+
                         </Link>
                         <button
                             className="bg-black my-2 md:w-[25vw] rounded-[25px] py-2 text-white"
