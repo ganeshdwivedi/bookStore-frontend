@@ -30,7 +30,7 @@ function Navbar() {
             <nav className="relative">
                 <div className={"flex fixed lg:sticky bg-white shadow-md  w-full z-40 flex-row justify-between xl:px-[65px] py-[10px] lg:py-[19px] items-center px-[25px]"}>
                     <Link to={"/"}>
-                        <Logo className={"xl:w-[108px] w-[80px] xl:h-[42px]"} />
+                        <Logo className={"xl:w-[108px] w-[100px] h-[40px] xl:h-[42px]"} />
                     </Link>
                     <div className="lg:block hidden">
                         <ul className="flex flex-row items-center gap-x-[40px]">
@@ -70,24 +70,24 @@ function Navbar() {
                 >
                     <div className="">
                         <div className="lg:hidden block">
-                           <ul className="flex flex-row items-center gap-x-[40px]">
-                            <Link to={'/books'}>
-                                <li className={mobNavlinkcss}>
-                                    All Books
-                                </li>
-                            </Link>
+                            <ul className="flex flex-col gap-4">
+                                <Link to={'/books'}>
+                                    <li className={mobNavlinkcss}>
+                                        All Books
+                                    </li>
+                                </Link>
 
-                            <Link to={'/books/create'} className={token ? "block" : "hidden"}>
-                                <li className={mobNavlinkcss}>Add Book</li>
-                            </Link>
-                            <Link className={token ? "hidden" : "block"} to={'/login'}>
-                                <li>
-                                    <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium">
-                                        Login
-                                    </button>
-                                </li>
-                            </Link>
-                        </ul>
+                                <Link to={'/books/create'} className={token ? "block" : "hidden"}>
+                                    <li className={mobNavlinkcss}>Add Book</li>
+                                </Link>
+                                <Link className={token ? "hidden" : "block"} to={'/login'}>
+                                    <li>
+                                        <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium">
+                                            Login
+                                        </button>
+                                    </li>
+                                </Link>
+                            </ul>
                         </div>
 
 
