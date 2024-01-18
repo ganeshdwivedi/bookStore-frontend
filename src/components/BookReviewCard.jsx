@@ -11,7 +11,7 @@ const BookReviewCard = () => {
     const [book, setBook] = useState([]);
 
     const getBook = async () => {
-        const response = await axios.get(`http://127.0.0.1:4000/api/books/${ID.id}`);
+        const response = await axios.get(`https://book-store-backend-ru34.onrender.com/api/books/${ID.id}`);
         // console.log(response);
         setBook(response.data);
         console.log(response.data)

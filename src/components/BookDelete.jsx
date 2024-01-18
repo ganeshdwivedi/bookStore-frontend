@@ -7,7 +7,7 @@ const BookDelete = () => {
 
     const token = localStorage.getItem('token')
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:4000',
+        baseURL: 'https://book-store-backend-ru34.onrender.com/api',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -16,7 +16,7 @@ const BookDelete = () => {
 
 
     const Delete = async () => {
-        const response = await axiosInstance.delete(`/api/books/delete/${ID.id}`);
+        const response = await axiosInstance.delete(`/books/delete/${ID.id}`);
         console.log(response)
         alert(response.data.message)
     }

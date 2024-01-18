@@ -19,7 +19,7 @@ const BookUpdate = () => {
     console.log(`token: ${token}`);
 
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:4000',
+        baseURL: 'https://book-store-backend-ru34.onrender.com/api',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -27,7 +27,7 @@ const BookUpdate = () => {
     });
 
     const Submit = async () => {
-        const response = await axiosInstance.put(`/api/books/update/${ID.id}`, { title, description, price, thumbnail, type, author })
+        const response = await axiosInstance.put(`/books/update/${ID.id}`, { title, description, price, thumbnail, type, author })
         console.log(response)
         alert(response.data.message)
     }

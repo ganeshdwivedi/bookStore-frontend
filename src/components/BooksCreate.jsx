@@ -14,7 +14,7 @@ const BooksCreate = () => {
     const token = localStorage.getItem("token");
 
     const axiosInstance = axios.create({
-        baseURL: 'http://127.0.0.1:4000',
+        baseURL: 'https://book-store-backend-ru34.onrender.com/api',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
@@ -22,7 +22,7 @@ const BooksCreate = () => {
     });
 
     const Submit = async () => {
-        const response = await axiosInstance.post(`/api/books/create`, { title, description, price, thumbnail, type, author })
+        const response = await axiosInstance.post(`/books/create`, { title, description, price, thumbnail, type, author })
         console.log(response)
         alert(response.status == 200 ? "Product created successfully" : "error")
     }
