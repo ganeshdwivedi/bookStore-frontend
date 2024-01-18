@@ -8,7 +8,7 @@ const Books = () => {
     const [books, setBooks] = useState([]);
     console.log(localStorage.getItem('token'))
     const getAllBooks = async () => {
-        const response = await axios.get('http://127.0.0.1:4000/api/books');
+        const response = await axios.get('https://book-store-backend-ru34.onrender.com/api/books');
         // console.log(response);
         setBooks(response.data.books);
         console.log(response.data.books)
