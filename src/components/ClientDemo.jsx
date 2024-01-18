@@ -27,7 +27,7 @@ const ClientDemo = () => {
                     <input className='border py-[10px] px-[20px] w-[90vw] xl:w-[50vw]' onChange={(e) => setPassword(e.target.value)} value={password} placeholder='Enter price of book' type="password" />
                 </div>
 
-                <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium" onClick={Submit} type="submit">Create</button>
+                <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium" onClick={Submit} type="submit">Login</button>
             </form>
 
         </div>
