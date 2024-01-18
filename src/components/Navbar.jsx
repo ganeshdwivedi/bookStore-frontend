@@ -70,16 +70,24 @@ function Navbar() {
                 >
                     <div className="">
                         <div className="lg:hidden block">
-                            <ul className="flex flex-col gap-4">
+                           <ul className="flex flex-row items-center gap-x-[40px]">
+                            <Link to={'/books'}>
                                 <li className={mobNavlinkcss}>
                                     All Books
                                 </li>
+                            </Link>
+
+                            <Link to={'/books/create'} className={token ? "block" : "hidden"}>
+                                <li className={mobNavlinkcss}>Add Book</li>
+                            </Link>
+                            <Link className={token ? "hidden" : "block"} to={'/login'}>
                                 <li>
                                     <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium">
                                         Login
                                     </button>
                                 </li>
-                            </ul>
+                            </Link>
+                        </ul>
                         </div>
 
 
