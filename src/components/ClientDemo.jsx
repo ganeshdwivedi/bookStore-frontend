@@ -8,10 +8,10 @@ const ClientDemo = () => {
 
 
     const Submit = async () => {
-        const response = await axios.post(`https://book-store-backend-ru34.onrender.com/api/user/login`, { email, password })
-        console.log(response);
+       const response = await axios.post(`https://book-store-backend-ru34.onrender.com/api/user/login`, { email, password })
         localStorage.setItem('token', response.data);
-        alert(reponse.data)
+        response.status == 200 ? navigate("/books") : alert("please enter valid email password");
+        navigate('/books')
     }
 
     return (
