@@ -23,9 +23,9 @@ const BookDelete = () => {
 
 
     return (
-        <div>
-            <h3 className='text-[30px] font-[600]'>Do you really want to delete this book</h3>
-            <button onClick={Delete} className='bg-red-400 text-white px-[35px] py-[10px]'>Delete</button>
+       <div className='py-[100px] flex flex-col items-center px-[25px]'>
+            <h3 className='text-[24px] text-center lg:text-[30px] font-[600]'>Do you really want to delete this book</h3>
+            <button onClick={Delete} className='bg-red-400 mt-5 hover:bg-white hover:text-red-400 transition-all rounded-md hover:border-red-400 border  text-white px-[35px] py-[10px]'>Delete</button>
         </div>
     )
 }
