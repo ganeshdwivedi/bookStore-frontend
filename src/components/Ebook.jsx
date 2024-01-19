@@ -11,7 +11,7 @@ const Ebook = () => {
                 <p className='text-[14px] mt-[5px] text-[#173F5F] text-medium xl:text-[16px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis urna, a eu.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 <div className='mt-[35px] flex flex-row'>
                     <input className='w-full px-[16px] xl:w-[25vw]' type='email' placeholder='Enter your email address' />
-                    <button className='bg-[#ED553B] hover:bg-white hover:border hover:border-[#ED5538] text-white text-[16px] hover:text-[#ED5538] font-[700] px-[35px] py-[10px] transition-colors rounded-md'>Login</button>
+                    <button className='bg-[#ED553B] border border-[#ED553B] hover:bg-white text-white text-[16px] hover:text-[#ED5538] font-[700] px-[35px] py-[10px] transition-colors rounded-md'>Login</button>
                 </div>
             </div>
             <div className='xl:h-[547px]'>

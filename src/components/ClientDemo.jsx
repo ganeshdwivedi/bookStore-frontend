@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const ClientDemo = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    const navigate = useNavigate();
 
     const Submit = async () => {
-       const response = await axios.post(`https://book-store-backend-ru34.onrender.com/api/user/login`, { email, password })
+        const response = await axios.post(`https://book-store-backend-ru34.onrender.com/api/user/login`, { email, password })
         localStorage.setItem('token', response.data);
         response.status == 200 ? navigate("/books") : alert("please enter valid email password");
         navigate('/books')
@@ -26,10 +27,8 @@ const ClientDemo = () => {
                     <label className='text-[18px] capitalize xl:text-[20px] font-[600]'>password</label>
                     <input className='border py-[10px] px-[20px] w-[90vw] xl:w-[50vw]' onChange={(e) => setPassword(e.target.value)} value={password} placeholder='Enter price of book' type="password" />
                 </div>
-
-                <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium" onClick={Submit} type="submit">Login</button>
+                <button className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium" onClick={Submit} type="submit">Create</button>
             </form>
-
         </div>
     )
 }

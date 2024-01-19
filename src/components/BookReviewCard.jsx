@@ -5,14 +5,13 @@ import axios from 'axios';
 const BookReviewCard = () => {
 
     const ID = useParams();
-   
 
     const token = localStorage.getItem('token')
     const [book, setBook] = useState([]);
 
     const getBook = async () => {
         const response = await axios.get(`https://book-store-backend-ru34.onrender.com/api/books/${ID.id}`);
-          setBook(response.data);
+        setBook(response.data);
     }
     useEffect(() => {
         getBook()
@@ -40,11 +39,9 @@ const BookReviewCard = () => {
                 </div>
 
                 <div className="w-[90vw] order-3 my-5 md:mx-16 md:w-[20vw]">
-
                     <h1 className="text-2xl">{book.title}</h1>
                     <h1 className="text-base">{book.author}</h1>
                     <h1 className="text-sm">{book.type}</h1>
-
                     <div className="my-5">
                         <h1 className="text-base font-medium">₹ {book.price}</h1>
                         <p className="text-slate-500 text-sm">incl. of taxes
@@ -62,12 +59,12 @@ const BookReviewCard = () => {
 
                         </Link>
                         <button
-                            className="bg-black my-2 md:w-[25vw] rounded-[25px] py-2 text-white"
+                            className="bg-black border-2 border-black  hover:bg-white hover:text-black transition-colors my-2 md:w-[25vw] rounded-[25px] py-2 text-white"
                         >
                             Add to Bag
                         </button>
                         <button
-                            className="border-2 border-black my-2 md:w-[25vw] rounded-[25px] py-2"
+                            className="border-2 hover:bg-black hover:text-white border-black my-2 md:w-[25vw] rounded-[25px] py-2"
                         >
                             Add to Favourite
                         </button></div>

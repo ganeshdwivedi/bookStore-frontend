@@ -10,7 +10,7 @@ const Footer = () => {
     const footerlinkcss = "text-[#173F5F] hover:scale-105 transition-transform text-[14px] xl:text-[16px] font-[600] cursor-pointer my-[2px]"
     return (
         <div className='px-[25px] py-[100px] xl:px-[150px]'>
-            <div className='grid grid-cols-1 place-items-center xl:grid-cols-3'>
+            <div className='grid grid-cols-1 xl:place-items-center xl:grid-cols-3'>
                 <div>
                     <Logo className={"w-32"} />
                     <p className='text-[16px] xl:text-[18px] font-[400] text-[#173F5F]'>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -18,7 +18,7 @@ const Footer = () => {
                         <FacebookOutlinedIcon className='text-[#ED553B] hover:text-black' fontSize='large' /><LinkedInIcon className='text-[#ED553B] hover:text-black' fontSize='large' />
                         <TwitterIcon className='text-[#ED553B] hover:text-black' fontSize='large' /><YouTubeIcon className='text-[#ED553B] hover:text-black' fontSize='large' /></div>
                 </div>
-                <div>
+                <div className='xl:mt-0 mt-[20px]'>
                     <h3 className='text-[#ED553B] font-[600] text-[18px] xl:text-[24px]'>Company</h3>
                     <ul className='mt-[15px]'>
                         <li className={footerlinkcss}>Home</li>

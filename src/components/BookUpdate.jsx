@@ -12,11 +12,8 @@ const BookUpdate = () => {
     const [type, setType] = useState("");
 
     const ID = useParams();
-    console.log(ID)
-    console.log(ID.id)
 
     const token = localStorage.getItem("token");
-    console.log(`token: ${token}`);
 
     const axiosInstance = axios.create({
         baseURL: 'https://book-store-backend-ru34.onrender.com/api',
@@ -33,8 +30,8 @@ const BookUpdate = () => {
     }
     return (
         <div className="px-[25px] xl:px-[65px] py-[100px] bg-[url('https://images.unsplash.com/photo-1593173945705-d6451ed5909a?q=80&w=1558&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
-            <h3 className='text-[24px] font-[600] text-center xl:text-[40px]'>Update Book</h3>
-            <form className='flex flex-col items-center justify-center bg-white bg-opacity-20 backdrop-blur-sm' onSubmit={(e) => e.preventDefault()}>
+            <h3 className='text-[24px] font-[600] text-center xl:text-[40px]'>Add Book</h3>
+            <form className='flex flex-col items-center justify-center backdrop-blur-sm' onSubmit={(e) => e.preventDefault()}>
                 <div className='flex flex-col my-[15px]'>
                     <label className='text-[18px] capitalize xl:text-[20px] font-[600]'>title of book</label>
                     <input className='border py-[10px] px-[20px] w-[90vw] xl:w-[50vw]' onChange={(e) => seTitle(e.target.value)} value={title} placeholder='Enter title of book' type="text" />
