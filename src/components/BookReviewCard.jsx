@@ -5,16 +5,14 @@ import axios from 'axios';
 const BookReviewCard = () => {
 
     const ID = useParams();
-    console.log(ID)
+   
 
     const token = localStorage.getItem('token')
     const [book, setBook] = useState([]);
 
     const getBook = async () => {
         const response = await axios.get(`https://book-store-backend-ru34.onrender.com/api/books/${ID.id}`);
-        // console.log(response);
-        setBook(response.data);
-        console.log(response.data)
+          setBook(response.data);
     }
     useEffect(() => {
         getBook()
