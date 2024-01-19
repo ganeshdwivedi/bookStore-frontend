@@ -6,7 +6,6 @@ import axios from 'axios'
 
 const Books = () => {
     const [books, setBooks] = useState([]);
-    console.log(localStorage.getItem('token'))
     const getAllBooks = async () => {
         const response = await axios.get('https://book-store-backend-ru34.onrender.com/api/books');
         setBooks(response.data.books);
