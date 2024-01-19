@@ -8,17 +8,21 @@ function Navbar() {
     const [toggle, settoggle] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
     const [token, setToken] = useState(null);
+
     const Toggle = () => {
         settoggle(!toggle);
     };
+
     useEffect(() => {
         const handleIsSticky = () => window.scrollY >= 50 ? setIsSticky(true) : setIsSticky(false);
         window.addEventListener('scroll', handleIsSticky);
         setToken(localStorage.getItem('token'))
     }, [isSticky])
-    console.log(token)
-    const okay = localStorage.getItem('token')
-    console.log(okay)
+
+    const Logout = () => {
+        setToken(localStorage.removeItem("token"))
+    }
+
     const navlinkcss =
         "text-black text-[#222744] text-[16px] font-[400] ";
     const mobNavlinkcss =
@@ -50,6 +54,11 @@ function Navbar() {
                                     </button>
                                 </li>
                             </Link>
+                            <li className={token ? "block" : "hidden"}>
+                                <button onClick={Logout} className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium">
+                                    Logout
+                                </button>
+                            </li>
                         </ul>
                     </div>
 
@@ -87,6 +96,11 @@ function Navbar() {
                                         </button>
                                     </li>
                                 </Link>
+                                <li className={token ? "block" : "hidden"}>
+                                    <button onClick={Logout} className="rounded-[13px] border bg-[#556EE6] lg:px-[45px] px-[25px] py-[7px] hover:border hover:border-[#556EE6] hover:text-[#556EE6] hover:bg-[white] transition-colors lg:py-[14px]  relative text-white font-medium">
+                                        Logout
+                                    </button>
+                                </li>
                             </ul>
                         </div>
 
